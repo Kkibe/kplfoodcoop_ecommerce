@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root{
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666; /*#6e6e6e*/
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --white: #fff;
+    --light-grey: #eee;
+    --light-green: rgb(193, 251, 193);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font: 1em sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    position: relative;
+    font-size: 62%;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 6.5rem;
+}
+
+section:last-child{
+    background: var(--light-grey);
+}
+
+.sub-heading{
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+h1{
+    text-align: center;
+    color: var(--black);
+    padding-top: 1rem;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+p{
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+    line-height: 2
+}
+
+.btn{
+    width: fit-content;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--white);
+    background: var(--black);
+    border-radius: .5rem;/*3.125rem*/
+    cursor: pointer;
+    padding: .8rem 3rem;
+    margin: .5rem .5rem;
+}  
+
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
+#close{
+    position: absolute;
+    color: var(--white);
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close:hover{
+    background: var(--green);
+}
+
+.btn-top{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    cursor: pointer;
+    bottom: 8px;
+    right: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--black);
+    background: transparent;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-top:hover{
+    background: var(--green);
+}
+
+@media screen and (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    
+    form .inputBox .input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .slide .content h3{
+        color: var(--black);
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 605px){
+    .single .wrapper .image{
+        height: 40%;
+    }
+    
+    .single .wrapper{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px){
+    html{
+        font-size: 60%;
+    }
+    
+    form .inputBox .input{
+        width: 100%;
+    }
+    .flyer{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+
+::-webkit-scrollbar{
+    width: 6px;
+  }
+  
+
+  ::-webkit-scrollbar-track{
+    background: var(--green);
+    border-radius: 50px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb{
+    background: var(--black);
+    border-radius: 50px;
+  }
+  
+
+
+section{
+    margin: .5rem 0;
+    padding: .5rem 1%;
+}
+
+.star{
+    color: var(--green);
+    font-size: 1.7rem;
+}
+
+.card{
+    background: var(--white);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.card.blog{
+    margin-top: 15px;
+}
+
+.card .btn{
+    margin: 5px 10px;
+    display: flex;
+    width: fit-content;
+}
+
+.card .btn *{
+    height: 100%;
+    display: flex;
+    margin: 0 3px;
+}
+
+.card .image{
+    height: 25rem;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    max-width: 900px;
+}
+  
+
+.card .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: fill;
+}
+
+.card   .icon{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: var(--white);
+    border-radius: 50%;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    /*display: none;*/
+}
+.card .icon:hover{
+    background: var(--green);
+    color: var(--white);
+}
+
+.card .heart{
+    left: -15rem;
+}
+
+.card .share{
+    right: -15rem;
+}
+
+
+.card:hover .heart{
+    left: 1.5rem;
+}
+
+.card:hover .share{
+    right: 1.5rem;
+}
+
+.card .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+
+
+
+.card .content .meta{
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.card .content .meta .trailing{
+    font-size: 1.4rem;
+    color:  var(--light-color);
+}
+
+.card .content .meta .duration{
+    padding: 4px 8px;
+    border-radius: 30px;
+    background: var(--light-color);
+    color: var(--white);
+    position: absolute;
+    right: 5px;
+    font-size: 1.2rem;
+}
+
+.card .content h3{
+    color: var(--black);
+    font-size: 2.5rem;
+    cursor: pointer;
+} 
+
+
+.card .content h3:hover{
+    text-decoration: underline;
+}
+
+.card .content p{
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card .add{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    border: 1px solid var(--black);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 5px 5px;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add:hover{
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+
+    *{
+        color: var(--white);
+    }
+}
+
+.hash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 6px;
+    margin: 5px 5px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.hash:hover{
+    background: var(--light-color);
+    color: var(--white);
+}
+
+
+
+@media screen and (max-width: 768px){
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+    
+    .slide .content h3{
+        color: var(--black);
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    
+    .dish img{
+        height: auto;
+        width: 100%;
+    }
+
+    form .inputBox .input{
+        width: 100%;
+    }
+}
