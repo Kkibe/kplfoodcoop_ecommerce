@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, updateProfile } from "firebase/auth";
-import { getFirestore, collection, doc, getDoc, addDoc, deleteDoc, enableIndexedDbPersistence, getDocs, query, orderBy, limit, updateDoc } from "firebase/firestore";
+import { getFirestore, collection, doc, getDoc, addDoc, deleteDoc, getDocs, query, orderBy, limit, updateDoc } from "firebase/firestore";
 import { deleteObject, getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { useState, useEffect } from "react";
   
@@ -23,11 +23,6 @@ import { useState, useEffect } from "react";
   const auth = getAuth(app);
   const db = getFirestore(app);
   const storage = getStorage(app);
-  
-  // Enable IndexedDB persistence for offline support
-  await enableIndexedDbPersistence(db).catch((err) => {
-    console.error("IndexedDB persistence error:", err.code);
-  });
   
   // Authentication Functions
   export const createUser = async (username, email, password, setToast, setError) => {
